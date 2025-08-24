@@ -1,0 +1,67 @@
+/* Sidebar styles */
+/* PROFILE */
+#profile {
+  background-color: #152945;
+  color: white;
+  padding: 20px;
+  margin-bottom: 5px;
+  font-family: 'Helvetica Neue';
+}
+
+#profile h3 {
+  margin-bottom: 20px;
+  font-family: 'Helvetica Neue';
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 145%;
+}
+
+#profile p {
+  font-family: 'Helvetica Neue';
+}
+
+/* BOTTOM */
+#bottom-section-employee-actions {
+  background-color: #152945;
+  color: white;
+  padding: 20px;
+}
+
+.right-side-actions h3 {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-align: left;
+  font-family: 'Helvetica Neue';
+  font-weight: bold;
+  font-size: 145%;
+}
+
+.right-side-actions ul {
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+.right-side-actions ul li {
+  margin-left: 10px;
+  border-left: 2px solid grey;
+  padding:15px;
+  text-align: left;
+  font-family: 'Helvetica Neue'
+}
+
+.right-side-actions ul li a {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.right-side-actions ul li a:hover {
+  color: grey;
+  background-color: #354152;
+  padding: 15px;
+}

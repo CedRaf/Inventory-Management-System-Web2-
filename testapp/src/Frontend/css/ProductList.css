@@ -1,0 +1,221 @@
+/* Basic styling for the entire page */
+html, body, .product-page-container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+.header {
+  height: 15%;
+  width: 100%;
+  background-color: #152945;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.companyLogo {
+  margin-left: 105px; /* Adjust margin as needed */
+  padding: 5px;
+}
+
+.Logout {
+  margin-right: 20px; /* Adjust margin as needed */
+  border: 1px solid #242c37;
+  border-radius: 999px;
+  background-color: transparent;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  background-image: linear-gradient(160deg, #354152 0%, #0d1324 100%);
+  margin-bottom: 1rem;
+  height: 3rem;
+  width: 5%;
+  cursor: pointer; /* Add cursor pointer for buttons */
+}
+
+/* Product body styles */
+.product-body {
+  height: 85%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  background-color: #354152;
+  font-family: 'Helvetica Neue';
+}
+
+/* Left main sidebar styles */
+.leftMain {
+  width: 15%;
+  height: 90%;
+  background-color: #354152;
+  display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  margin: 5px;
+}
+
+/* Right main content styles */
+.rightMain {
+  width: 85%;
+  height: 90%;
+  padding: 10px; /* Adjust padding as needed */
+  background-color: #354152;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Search bar styles */
+.SearchBars {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.Default {
+  margin-left: auto; /* Pushes the Default button to the right */
+  align-self: flex-start;
+  margin-right: 40px; /* Adjust margin as needed */
+  width: 10%; /* Sets the width of Default */
+}
+
+.notDefault {
+  display: flex;
+  justify-content: space-between; /* Evenly spaces the elements inside */
+  gap: 15px;
+  width: calc(60% - 40px); /* Calculates the width of notDefault considering the gap */
+  margin-right: 10%; /* Adjust margin as needed */
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px; /* Adjust margin as needed */
+  font-family: 'Helvetica Neue';
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid black; /* Adjust border color as needed */
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  font-family: 'Helvetica Neue';
+  color: #fff;
+}
+
+th {
+  background-color: #152945;
+}
+
+/* Buttons in table */
+td button {
+  margin-right: 5px; /* Adjust margin as needed */
+}
+
+/* Styles for UpdateProduct component */
+#Title {
+  color: #fff;
+  margin-bottom: 10px; /* Adjust margin as needed */
+  font-size: 145%;
+}
+
+.companyLogo img {
+  width: 90px; 
+  height: 90px; 
+}
+
+.AddProduct form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.AddProduct form input[type="text"],
+.AddProduct form input[type="password"],
+.AddProduct form input[type="date"] {
+  width: calc(50% - 20px); /* Adjust width and margins */
+  /* For two inputs per line, deduct the margin from the width */
+  padding: 8px;
+  margin: 10px; /* Adjust margin as needed */
+  border: 1px solid #242c37;
+  border-radius: 999px;
+  background-color: transparent;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Optional: Hover/focus styles for inputs */
+.AddProduct form input[type="text"]:hover,
+.AddProduct form input[type="password"]:hover,
+.AddProduct form input[type="date"]:hover,
+.AddProduct form input[type="text"]:focus,
+.AddProduct form input[type="password"]:focus,
+.AddProduct form input[type="date"]:focus {
+  border-color: #fff;
+  outline: none;
+}
+
+button {
+  border: 1px solid #242c37;
+  border-radius: 15px;
+  background-color: transparent;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  background-image: linear-gradient(160deg, #354152 0%, #152945 100%);
+  margin-bottom: 1rem;
+  height: 3rem;
+  width: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  cursor: pointer; /* Add cursor pointer for buttons */
+}
+
+
+form {
+  width: 100%; /* Ensures forms take the full width */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px; /* Adjust padding as needed */
+  margin-bottom: 10px; /* Adjust margin as needed */
+  border: 1px solid #242c37;
+  border-radius: 999px;
+  background-color: transparent;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+input::placeholder {
+  color: #7e8ba3; /* Adjust placeholder color */
+}
+
+/* Optional: Hover/focus styles for inputs */
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="date"]:hover,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus {
+  border-color: #fff; /* Change border color on hover/focus */
+  outline: none; /* Remove default focus outline */
+}
+
+
+select {
+  width: 100%; /* Full width */
+  padding: 8px; /* Adjust padding as needed */
+  margin-bottom: 10px; /* Adjust margin as needed */
+  border: 1px solid #242c37;
+  border-radius: 999px;
+  background-color: #242c37;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}

@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      =  "mysql://root:root@localhost:3306/syt-glass"
+}
+
+model Product {
+  productID         Int       @id @default(autoincrement())
+  supplier          Supplier  @relation(fields: [supplierID], references: [supplierID])
+  supplierID        Int   
+  product_type      String    @db.VarChar(255)
+  thickness         Int
+  color             String    @db.VarChar(50)
+  product_quantity  Int
+  product_location  String    @db.VarChar(50)
+  last_shipment     DateTime  @default(now())
+  amount_ordered    Int  
+  orders            Orders[]
+}
+
+model Supplier {
+  supplierID      Int       @id @default(autoincrement())
+  supplier_name   String    @db.VarChar(255)
+  first_name      String    @db.VarChar(255)
+  last_name       String    @db.VarChar(255)
+  email           String    @db.VarChar(255)
+  phone_number    String    @db.VarChar(50)
+  bank_acc_no     String    @db.VarChar(255)
+  delivery_sched  String    @db.VarChar(255)
+  products        Product[]
+  
+}
+
+model Employee {
+  employeeID    Int       @id @default(autoincrement())
+  first_name    String    @db.VarChar(255)
+  last_name     String    @db.VarChar(255)
+  birth_date    DateTime  @default(now())
+  address       String    @db.VarChar(255)
+  gender        String    @db.VarChar(50)
+  phone_number  String    @db.VarChar(50)
+  emp_type      String    @db.VarChar(255)
+  emp_email     String    @db.VarChar(255)
+  password      String    @db.VarChar(255)
+  orders        Orders[]
+}
+
+model Customer {
+  customerID    Int       @id @default(autoincrement())
+  first_name    String    @db.VarChar(255)
+  last_name     String    @db.VarChar(255)
+  email_address String    @db.VarChar(255)
+  phone_number  String    @db.VarChar(50)
+  home_address  String    @db.VarChar(255)
+  orders        Orders[]
+}
+
+model Orders {
+  orderID           Int       @id @default(autoincrement())
+  customer          Customer  @relation(fields: [customerID], references: [customerID])
+  customerID        Int
+  product           Product   @relation(fields: [productID], references: [productID])
+  productID         Int
+  employee          Employee  @relation(fields: [employeeID], references: [employeeID])
+  employeeID        Int
+  amount_ordered    Int
+  process_date      DateTime  @default(now())
+  shipment_date     DateTime  @default(now())
+  order_status      String    @db.VarChar(255)
+}
